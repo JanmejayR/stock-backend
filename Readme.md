@@ -12,6 +12,7 @@
 
 2. Install dependencies:
 ```bash
+  cd stock-backend
   npm install
    ```
 
