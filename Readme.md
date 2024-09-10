@@ -1,3 +1,6 @@
+
+
+
 # Installation and Setup 
 
 1. Clone the repository:
@@ -47,6 +50,11 @@ make sure that password length is atleast six characters, other checks are basic
 | PUT    | `/api/user/profile`         | Update user profile            |
 
 ## Post Routes
+
+pagination has been implemented  for /api/posts get request, here is an example of a request containing pagination parameters for idea :- 
+```bash
+http://localhost:3000/api/posts?tags=payment,money,bank&sortBy=date&page=1&limit=1
+```
 
 | Method  | Endpoint                              | Description                                 |
 |---------|---------------------------------------|---------------------------------------------|
