@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io Client Test</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Socket.io Client Test</h1>
+    <script>
+        const socket = io('http://localhost:3000'); // Make sure this matches your server's URL
+
+        socket.on('connect', () => {
+            console.log('Connected to Socket.io server');
+        });
+
+        socket.on('updateComments', (data) => {
+            console.log('Received new comment:', data);
+        });
+
+        socket.on('updateLikes', (data) => {
+            console.log('Received like update:', data);
+        });
+    </script>
+</body>
+</html>
