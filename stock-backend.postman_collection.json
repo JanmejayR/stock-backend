@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "33ee9c04-5a2f-46b9-b331-a7dd06c53333",
+		"name": "alphatribe_assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29260705"
+	},
+	"item": [
+		{
+			"name": "auth requests",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"john doe\",\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTkwNDI5MywiZXhwIjoxNzI1OTA3ODkzfQ.6ueNqiE6DuKcHiuxq8-IZ2Wo2FRGf02g-2pNUS2RFW8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/profile/66df2e46f22df22584aaadc7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"66df2e46f22df22584aaadc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTkwNDI5MywiZXhwIjoxNzI1OTA3ODkzfQ.6ueNqiE6DuKcHiuxq8-IZ2Wo2FRGf02g-2pNUS2RFW8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"bio\" : \"Hi, I am John Doe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user post requests",
+			"item": [
+				{
+					"name": "create stock post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk1Mjk4NywiZXhwIjoxNzI1OTU2NTg3fQ.TH8AhyQExLW4z1CPYcPpx2FffxMMmlp4RFWh6RyB9S4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stockSymbol\": \"ABC\",\r\n    \"title\": \"Zomato\",\r\n    \"description\": \"stock of zomato\",\r\n    \"tags\" : [\"food\" , \"delivery\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk1Mjk4NywiZXhwIjoxNzI1OTU2NTg3fQ.TH8AhyQExLW4z1CPYcPpx2FffxMMmlp4RFWh6RyB9S4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stockSymbol\": \"ABC\",\r\n    \"title\": \"Zomato\",\r\n    \"description\": \"stock of zomato\",\r\n    \"tags\" : [\"food\" , \"delivery\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk2NDQ2NSwiZXhwIjoxNzI1OTY4MDY1fQ.zQXx73eqIdHOdhKkmyzNb6ckkyTAFSdL-4j9ybQI110",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stockSymbol\": \"ABC\",\r\n    \"title\": \"Zomato\",\r\n    \"description\": \"stock of zomato\",\r\n    \"tags\" : [\"food\" , \"delivery\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/66dff9c26d6f6b2cbfd4950e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"66dff9c26d6f6b2cbfd4950e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk1Mjk4NywiZXhwIjoxNzI1OTU2NTg3fQ.TH8AhyQExLW4z1CPYcPpx2FffxMMmlp4RFWh6RyB9S4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stockSymbol\": \"ABC\",\r\n    \"title\": \"Zomato\",\r\n    \"description\": \"stock of zomato\",\r\n    \"tags\" : [\"food\" , \"delivery\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/adsg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"adsg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like and unlike post",
+			"item": [
+				{
+					"name": "like post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk1NjcwMSwiZXhwIjoxNzI1OTYwMzAxfQ.mC4cgFogduJqM3c3ZkFiRUnghUs03FimwjAxtWSv9aA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/66e002f94f0d0907f04cb805/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"66e002f94f0d0907f04cb805",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlike post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk1NjcwMSwiZXhwIjoxNzI1OTYwMzAxfQ.mC4cgFogduJqM3c3ZkFiRUnghUs03FimwjAxtWSv9aA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/66e002f94f0d0907f04cb805/unlike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"66e002f94f0d0907f04cb805",
+								"unlike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add and delete comment",
+			"item": [
+				{
+					"name": "add Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGYyZTQ2ZjIyZGYyMjU4NGFhYWRjNyIsImlhdCI6MTcyNTk2NDQ2NSwiZXhwIjoxNzI1OTY4MDY1fQ.zQXx73eqIdHOdhKkmyzNb6ckkyTAFSdL-4j9ybQI110",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"This is a good stock\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/66dff9c26d6f6b2cbfd4950e/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"66dff9c26d6f6b2cbfd4950e",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
